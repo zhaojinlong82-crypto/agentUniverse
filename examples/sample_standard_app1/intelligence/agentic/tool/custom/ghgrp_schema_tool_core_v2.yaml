@@ -1,0 +1,15 @@
+name: 'ghgrp_schema_tool_core_v2'
+description: '读取 core schema 的表/字段信息（可选样例行），并从自然语言 input 自动解析表名与是否需要样例。'
+tool_type: 'api'
+input_keys: ['input']
+
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+schema: 'core'
+default_include_samples: false
+default_sample_rows: 3
+max_sample_rows: 5
+
+metadata:
+  type: 'TOOL'
+  module: 'sample_standard_app1.intelligence.agentic.tool.custom.ghgrp_schema_tool_core_v2'
+  class: 'GhgrpSchemaTool'

@@ -1,0 +1,18 @@
+name: 'ghgrp_sql_tool'
+description: |
+  只读SQL查询工具：用于查询本地PostgreSQL(GHGRP/甲烷设施级数据库)。
+  仅允许SELECT/WITH；自动限制返回行数；用于统计、TopN、分组汇总等结构化问题。
+input_keys: ['input']
+
+# ===== 自定义配置（允许扩展key）=====
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+default_schema: 'core'
+allowed_schemas: ['core', 'staging']
+default_limit: 50
+max_limit: 200
+query_timeout_seconds: 30
+
+metadata:
+  type: 'TOOL'
+  module: 'sample_standard_app1.intelligence.agentic.tool.custom.ghgrp_sql_tool'
+  class: 'GhgRpSqlTool'

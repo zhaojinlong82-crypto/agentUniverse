@@ -1,0 +1,8 @@
+name: 'azureopenai_embedding'
+description: 'embedding use azure openai api'
+embedding_model_name: 'text-embedding-ada-002'
+
+metadata:
+  type: 'EMBEDDING'
+  module: 'agentuniverse.agent.action.knowledge.embedding.azureopenai_embedding'
+  class: 'AzureOpenAIEmbedding'

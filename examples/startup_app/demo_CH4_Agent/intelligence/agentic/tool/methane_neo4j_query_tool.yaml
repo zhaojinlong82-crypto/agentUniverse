@@ -1,0 +1,26 @@
+name: 'methane_neo4j_query_tool.yaml'
+description: |
+  使用该工具可以对甲烷排放知识图谱（Neo4j）进行直连查询。
+  工具输入为自然语言问题（input），工具会将问题映射为 Cypher 并返回结构化结果（JSON）。
+
+  工具输入参数说明：
+    - input (必填): 自然语言问题，例如“2023年CH4排放最高的10个设施有哪些？”
+
+  示例工具输入：
+    示例1:
+      ```json
+      {
+        "input": "2023年CH4排放最高的10个设施有哪些？"
+      }
+      ```
+    示例2:
+      ```json
+      {
+        "input": "德州有哪些设施？"
+      }
+      ```
+
+tool_type: 'api'
+input_keys: ['input']
+
+meta_class: '${ROOT_PACKAGE}.intelligence.agentic.tool.methane_neo4j_query_tool.MethaneNeo4jQueryTool'

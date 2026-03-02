@@ -1,0 +1,20 @@
+name: 'ghgrp_pg'
+description: 'Local Postgres for GHGRP'
+db_uri: "postgresql+psycopg2://ayan:123456@localhost:5432/ayan"
+
+sql_database_args:
+  schema: "core"
+  sample_rows_in_table_info: 3
+  include_tables: ["facility", "emission_record"]
+  # ignore_tables: ["alembic_version"]
+  indexes_in_table_info: true
+  view_support: true
+  max_string_length: 10000
+
+engine_args:
+  pool_pre_ping: true
+  # connect_args:
+  #   options: "-c statement_timeout=60000"
+
+metadata:
+  type: 'SQLDB_WRAPPER'

@@ -1,0 +1,29 @@
+info:
+  name: 'demo_agent1'
+  description: 'Test agent for SQL list tool'
+
+profile:
+  introduction: 你是一位精通数据分析与数据库检索的AI助手。
+  target: 你的目标是基于工具返回结果，判断本地数据库是否联通。
+  instruction: |
+    规则：
+      测试一下工具
+    
+    背景信息：
+    {background}
+    
+    用户问题：{input}
+
+  llm_model:
+    name: 'qwen-max'
+
+action:
+  tool:
+    - 'list_sql_database_tool'
+memory:
+  name: 'demo_memory'
+
+metadata:
+  type: 'AGENT'
+  module: 'sample_standard_app1.intelligence.agentic.agent.agent_instance.demo_agent1'
+  class: 'DemoAgent1'

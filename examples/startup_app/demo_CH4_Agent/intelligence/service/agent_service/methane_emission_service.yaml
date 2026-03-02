@@ -1,0 +1,5 @@
+name: 'methane_emission_service'
+description: 'demo react service of demo agent'
+agent: 'methane_emission_agent'
+metadata:
+  type: 'SERVICE'

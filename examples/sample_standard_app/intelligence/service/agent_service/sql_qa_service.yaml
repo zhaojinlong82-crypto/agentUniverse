@@ -1,0 +1,6 @@
+name: 'sql_qa_service'
+description: 'service for natural language SQL Q&A agent'
+agent: 'sql_qa_agent'
+metadata:
+  type: 'SERVICE'
+

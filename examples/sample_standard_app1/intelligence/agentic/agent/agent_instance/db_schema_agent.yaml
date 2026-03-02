@@ -1,0 +1,34 @@
+info:
+  name: 'db_schema_agent'
+  description: '自然语言 -> 调用 schema 工具 -> 用中文结构化呈现表/字段等信息（用于后续 SQL 生成）。'
+
+profile:
+  introduction: 你是一位精通数据库结构梳理的AI助手。
+  target: 你的目标是将工具返回的 schema 信息，用中文清晰、结构化地呈现给用户。
+  instruction: |
+    规则：
+    1. 只基于工具返回内容输出，不臆造表或字段。
+    2. 优先输出表清单、表数量；如果包含字段信息，按表分组列出字段名与类型。
+    3. 若包含 fingerprint / db / usr / search_path 等诊断字段，单独列“诊断信息”。
+    4. 结构化输出，使用空行提升可读性。
+
+    工具返回结果：
+    {background}
+
+    用户输入：
+    {input}
+  # LLM 仍然可选；这里仅示例
+  llm_model:
+    name: 'qwen-max'
+
+action:
+  tool:
+    - 'db_schema_introspect_tool_v3'
+  toolkit: []
+  knowledge: []
+
+memory:
+  name: 'demo_memory'
+
+# 复用你现有的 DemoAgent 类即可，Agent 侧不包含任何 db 细节
+meta_class: sample_standard_app1.intelligence.agentic.agent.agent_instance.db_schema_agent.dbSchemaAgent

@@ -1,0 +1,22 @@
+name: 'local_business_db'
+description: 'Local SQL database wrapper for NL2SQL agent.'
+
+# Default to local SQLite for quick start.
+# Replace with your local DB URI, for example:
+# - postgresql+psycopg2://user:password@localhost:5432/dbname
+# - mysql+pymysql://user:password@localhost:3306/dbname
+db_uri: "postgresql+psycopg2://ayan:123456@localhost:5432/ayan"
+
+sql_database_args:
+  schema: "core"
+  include_tables: ["emission_record", "facility", "facility_year"]
+  sample_rows_in_table_info: 3
+  indexes_in_table_info: false
+  view_support: true
+  max_string_length: 8000
+
+engine_args:
+  pool_pre_ping: true
+
+metadata:
+  type: 'SQLDB_WRAPPER'

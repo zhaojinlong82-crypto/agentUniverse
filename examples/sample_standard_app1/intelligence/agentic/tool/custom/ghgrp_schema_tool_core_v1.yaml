@@ -1,0 +1,16 @@
+name: 'ghgrp_schema_tool_core_v1'
+description: '获取 core schema 的表与字段信息（可选样例行），用于 NL2SQL 生成前的结构约束。'
+tool_type: 'api'
+input_keys: ['input', 'table_name', 'include_samples', 'sample_rows']
+
+# === Tool 自身配置（只在 Tool 层出现，Agent 层不出现） ===
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+schema_name: 'core'
+default_include_samples: false
+default_sample_rows: 3
+max_sample_rows: 5
+
+metadata:
+  type: 'TOOL'
+  module: 'sample_standard_app1.intelligence.agentic.tool.custom.ghgrp_schema_tool_core_v1'
+  class: 'GhgrpSchemaTool'

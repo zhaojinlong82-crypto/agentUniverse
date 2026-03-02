@@ -1,0 +1,15 @@
+name: 🙋 Feature Request | 功能请求
+description: Please describe the features you expect. | 请描述您期望添加的功能。
+title: "🙋 [Feature] <your feature request xxx>"
+labels: ["feature"]
+body:
+- type: markdown
+  attributes:
+    value: "Please fill out the info before you submit the feature request.. | 请在功能请求提交以前回答以下这些问题。"
+- type: textarea
+  attributes:
+    label: feature
+    description: Please describe in detail the new features you expect. | 请详细描述您预期的新功能
+    placeholder: "I hope ..."
+  validations:
+    required: true

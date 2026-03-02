@@ -1,0 +1,13 @@
+name: 'ghgrp_pg_ping_tool'
+description: 'GHGRP PostgreSQL 连通性验证工具：固定执行一条 SQL 并返回结果。'
+tool_type: 'api'
+input_keys: []   # ✅ 不需要用户输入
+
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+default_schema: 'core'
+statement_timeout_ms: 8000
+
+metadata:
+  type: 'TOOL'
+  module: 'sample_standard_app1.intelligence.agentic.tool.custom.ghgrp_pg_ping_tool'
+  class: 'GhgrpPgPingTool'

@@ -1,0 +1,21 @@
+info:
+  name: 'sql_qa_agent'
+  description: 'Natural language SQL Q&A agent for local database.'
+profile:
+  prompt_version: sql_qa_react.cn
+  llm_model:
+    name: 'qwen-max'
+    temperature: 0.1
+    stop: 'Observation'
+  max_iterations: 8
+action:
+  tool:
+    - 'list_sql_database_tool'
+    - 'info_sql_database_tool'
+    - 'query_sql_database_tool'
+memory:
+  name: 'demo_memory'
+metadata:
+  type: 'AGENT'
+  module: 'agentuniverse.agent.template.react_agent_template'
+  class: 'ReActAgentTemplate'

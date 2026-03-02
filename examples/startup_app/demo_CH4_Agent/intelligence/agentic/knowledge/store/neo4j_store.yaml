@@ -1,0 +1,15 @@
+name: "neo4j_store.yaml"
+description: "Methane emission facility knowledge graph store (Neo4j)"
+
+store_type: "neo4j"
+
+# Neo4j connection (must match Neo4jStore fields)
+uri: "bolt://localhost:7687"
+user: "neo4j"
+password: "Zhaoyan123"
+database: "neo4j"
+
+metadata:
+  type: "STORE"
+  module: "agentuniverse.agent.action.knowledge.store.neo4j_store"
+  class: "Neo4jStore"

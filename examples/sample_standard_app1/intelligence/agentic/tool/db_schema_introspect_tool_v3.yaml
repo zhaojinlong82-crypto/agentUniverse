@@ -1,0 +1,20 @@
+name: 'db_schema_introspect_tool_v3'
+description: '读取指定 schema 的表/字段/主键信息（可选索引与样例行），并从自然语言 input 自动解析表名与参数。'
+tool_type: 'api'
+input_keys: ['input']
+
+# 解耦：只在 tool yaml 配置连接信息；Agent 不写死任何 db 细节
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+db_schema: 'core'
+
+default_include_samples: false
+default_sample_rows: 3
+max_sample_rows: 5
+
+default_include_pk: true
+default_include_indexes: false
+
+metadata:
+  type: 'TOOL'
+  module: 'sample_standard_app1.intelligence.agentic.tool.db_schema_introspect_tool_v3'
+  class: 'DbSchemaIntrospectTool'

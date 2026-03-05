@@ -11,9 +11,10 @@ memory:
 action:
   knowledge: []
   tool:
+    - 'list_sql_database_tool'
+    - 'info_sql_database_tool'
     - 'query_sql_database_tool'
 metadata:
   type: 'AGENT'
-  module: 'agentuniverse.agent.template.executing_agent_template'
-  class: 'ExecutingAgentTemplate'
-
+  module: 'methane_expert_app.intelligence.agentic.agent.agent_template.methane_executing_agent_template'
+  class: 'MethaneExecutingAgentTemplate'

@@ -36,4 +36,4 @@
 ## 已知限制
 
 - 当前数据库无 `city` 字段，空间粒度先用 `county` 近似
-- 初始执行器仅挂载 `query_sql_database_tool`，后续可升级为 ReAct 执行器以动态选择 list/info/query 工具
+- 执行器当前已支持 `list/info/query` 三工具动态选择；后续新增表时，可通过环境变量 `METHANE_INFO_TABLES_DEFAULT` 扩展 `info` 默认表清单（逗号分隔）

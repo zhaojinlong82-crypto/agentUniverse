@@ -29,7 +29,6 @@ def chat(question: str, session_id: str = "methane-peer-demo"):
 
 if __name__ == "__main__":
     demo_question = (
-        "请分析2012年美国甲烷排放中，排放最高的县（以county近似城市）是谁，"
-        "并说明口径、SQL证据与下一步补充数据建议。"
+        "请我想知道2023年美国甲烷排放中，排放最高的前三个设施"
     )
     chat(demo_question)

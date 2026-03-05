@@ -1,0 +1,15 @@
+info:
+  name: 'methane_expressing_agent'
+  description: 'Expressing agent for methane-domain final response'
+profile:
+  prompt_version: methane_expressing.cn
+  llm_model:
+    name: 'qwen-max'
+    temperature: 0.1
+memory:
+  name: ''
+metadata:
+  type: 'AGENT'
+  module: 'agentuniverse.agent.template.expressing_agent_template'
+  class: 'ExpressingAgentTemplate'
+

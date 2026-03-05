@@ -1,0 +1,52 @@
+[BASE_INFO]
+appname = 'methane_expert_app'
+
+[PACKAGE_PATH_INFO]
+ROOT_PACKAGE = 'methane_expert_app'
+
+[CORE_PACKAGE]
+default = ['${ROOT_PACKAGE}.intelligence.agentic']
+agent = ['${ROOT_PACKAGE}.intelligence.agentic.agent']
+knowledge = ['${ROOT_PACKAGE}.intelligence.agentic.knowledge']
+llm = ['${ROOT_PACKAGE}.intelligence.agentic.llm']
+planner = []
+tool = ['${ROOT_PACKAGE}.intelligence.agentic.tool']
+toolkit = []
+memory = ['${ROOT_PACKAGE}.intelligence.agentic.memory']
+service = ['${ROOT_PACKAGE}.intelligence.service.agent_service']
+prompt = ['${ROOT_PACKAGE}.intelligence.agentic.prompt']
+product = []
+store = []
+rag_router = []
+doc_processor = []
+query_paraphraser = []
+memory_compressor = []
+memory_storage = []
+log_sink = []
+llm_channel = ['${ROOT_PACKAGE}.intelligence.agentic.llm']
+sqldb_wrapper = ['${ROOT_PACKAGE}.intelligence.sqldb_wrapper']
+work_pattern = ['${ROOT_PACKAGE}.intelligence.agentic.work_pattern']
+
+[SUB_CONFIG_PATH]
+log_config_path = './log_config.toml'
+custom_key_path = '../../sample_standard_app/config/custom_key.toml'
+
+[DB]
+system_db_uri = ''
+
+[GUNICORN]
+activate = 'false'
+gunicorn_config_path = './gunicorn_config.toml'
+
+[GRPC]
+activate = 'false'
+max_workers = 10
+server_port = 50051
+
+[MONITOR]
+activate = false
+dir = './monitor'
+
+[EXTENSION_MODULES]
+class_list = []
+

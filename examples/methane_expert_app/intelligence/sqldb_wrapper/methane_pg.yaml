@@ -1,0 +1,15 @@
+name: 'methane_pg'
+description: 'Methane facility-level PostgreSQL wrapper.'
+db_uri: 'postgresql+psycopg2://ayan:123456@localhost:5432/ayan'
+sql_database_args:
+  schema: 'core'
+  include_tables: ['emission_record', 'facility', 'facility_year']
+  sample_rows_in_table_info: 3
+  indexes_in_table_info: false
+  view_support: true
+  max_string_length: 8000
+engine_args:
+  pool_pre_ping: true
+metadata:
+  type: 'SQLDB_WRAPPER'
+

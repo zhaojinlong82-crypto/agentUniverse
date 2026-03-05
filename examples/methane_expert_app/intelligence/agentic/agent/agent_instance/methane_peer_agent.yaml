@@ -1,0 +1,17 @@
+info:
+  name: 'methane_peer_agent'
+  description: 'Methane facility-domain PEER agent (initial version)'
+profile:
+  planning: 'methane_planning_agent'
+  executing: 'methane_executing_agent'
+  expressing: 'methane_expressing_agent'
+  reviewing: 'methane_reviewing_agent'
+  retry_count: 2
+  eval_threshold: 60
+  jump_step: 'planning'
+memory:
+  name: ''
+metadata:
+  type: 'AGENT'
+  module: 'methane_expert_app.intelligence.agentic.agent.agent_template.methane_peer_router_agent_template'
+  class: 'MethanePeerRouterAgentTemplate'

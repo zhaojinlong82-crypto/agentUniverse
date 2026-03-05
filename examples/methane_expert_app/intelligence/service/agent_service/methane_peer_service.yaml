@@ -1,0 +1,6 @@
+name: 'methane_peer_service'
+description: 'Service for methane PEER agent (initial version).'
+agent: 'methane_peer_agent'
+metadata:
+  type: 'SERVICE'
+

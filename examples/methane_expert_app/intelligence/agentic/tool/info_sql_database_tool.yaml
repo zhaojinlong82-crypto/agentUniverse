@@ -1,0 +1,14 @@
+name: 'info_sql_database_tool'
+description: 'Show DDL and sample rows for given tables in methane database.'
+tool_type: 'api'
+input_keys: ['input']
+langchain:
+  module: langchain_community.tools
+  class_name: InfoSQLDatabaseTool
+  init_params:
+    db_wrapper: methane_pg
+metadata:
+  type: 'TOOL'
+  module: 'agentuniverse.agent.action.tool.common_tool.sql_langchain_tool'
+  class: 'SqlLangchainTool'
+

@@ -1,0 +1,14 @@
+info:
+  name: 'methane_planning_agent'
+  description: 'Planning agent for methane-domain problem decomposition'
+profile:
+  prompt_version: methane_planning.cn
+  llm_model:
+    name: 'qwen-max'
+    temperature: 0.1
+memory:
+  name: ''
+metadata:
+  type: 'AGENT'
+  module: 'methane_expert_app.intelligence.agentic.agent.agent_template.methane_planning_agent_template'
+  class: 'MethanePlanningAgentTemplate'
